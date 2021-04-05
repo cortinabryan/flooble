@@ -3,3 +3,59 @@
 * {
   box-sizing: border-box;
 }
+
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+}
+
+#navbar {
+  display: grid;
+  padding-left: 25px;
+  padding-right: 25px;
+  grid-template-columns: 50px 50px 1fr 100px 50px 50px 50px;
+  grid-template-rows: 50px;
+  grid-template-areas: "about store . mail images menu sign-in";
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#about {
+  grid-area: about;
+  justify-self: center;
+  align-self: center;
+}
+#store {
+  grid-area: store;
+  justify-self: center;
+  align-self: center;
+}
+#mail {
+  grid-area: mail;
+  justify-self: center;
+  align-self: center;
+}
+#images {
+  grid-area: images;
+  justify-self: center;
+  align-self: center;
+}
+#menu {
+  grid-area: menu;
+  justify-self: center;
+  align-self: center;
+}
+#sign-in {
+  grid-area: sign-in;
+  justify-self: center;
+  align-self: center;
+}
