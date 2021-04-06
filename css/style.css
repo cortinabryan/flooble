@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: poppins;
+  /* background-color: black; */
 }
 
 #navbar {
@@ -27,6 +28,10 @@ body {
 a {
   text-decoration: none;
   color: #fff;
+}
+
+#flooble {
+  font-size: 8rem;
 }
 
 #about {
@@ -58,4 +63,46 @@ a {
   grid-area: sign-in;
   justify-self: center;
   align-self: center;
+}
+
+#sign-in img {
+  border-radius: 50%;
+}
+
+#main {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: 200px 100px 200px;
+  grid-template-areas:
+    ". flooble ."
+    ". search ."
+    ". flex-box .";
+}
+
+#flex-box {
+  grid-area: flex-box;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr 0fr;
+  grid-template-rows: 0 75px 75px 0;
+  grid-template-areas:
+    ". . . ."
+    ". flooble-search-btn random-search .";
+}
+
+#flooble {
+  grid-area: flooble;
+}
+
+#search {
+  grid-area: search;
+}
+
+#flooble-search-btn {
+  grid-area: flooble-search-btn;
+}
+
+#random-search {
+  grid-area: random-search;
 }
