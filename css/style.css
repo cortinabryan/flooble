@@ -2,6 +2,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -10,17 +12,16 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: poppins;
-  /* background-color: black; */
+  background-color: rgba(0, 0, 0, 0.623);
 }
 
 #navbar {
   display: grid;
+  padding-top: 15px;
   padding-left: 25px;
   padding-right: 25px;
-  grid-template-columns: 50px 50px 1fr 100px 50px 50px 50px;
+  grid-template-columns: 80px 80px 1fr 80px 80px 80px 50px;
   grid-template-rows: 50px;
   grid-template-areas: "about store . mail images menu sign-in";
 }
@@ -32,6 +33,10 @@ a {
 
 #flooble {
   font-size: 8rem;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
 }
 
 #about {
@@ -73,8 +78,8 @@ a {
   display: grid;
   justify-content: center;
   text-align: center;
-  grid-template-columns: 1fr 1.5fr 1fr;
-  grid-template-rows: 200px 100px 200px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 20rem 80px 600px;
   grid-template-areas:
     ". flooble ."
     ". search ."
@@ -82,27 +87,78 @@ a {
 }
 
 #flex-box {
+  padding: 50px;
   grid-area: flex-box;
   display: grid;
   grid-template-columns: 0fr 1fr 1fr 0fr;
-  grid-template-rows: 0 75px 75px 0;
-  grid-template-areas:
-    ". . . ."
-    ". flooble-search-btn random-search .";
+  grid-template-rows: 0 4.5rem 0 0;
+  grid-template-areas: ". . . ." ". flooble-search-btn random-search .";
 }
 
 #flooble {
+  /* padding-top: 5rem; */
   grid-area: flooble;
+  letter-spacing: 2rem;
 }
 
+/* Transfered grid area to .search-box. i created a box container or the search bar. CONTINUE*/
+
 #search {
-  grid-area: search;
+  /* grid-area: search; */
+  border-radius: 80px;
 }
 
 #flooble-search-btn {
+  font-weight: 5rem;
   grid-area: flooble-search-btn;
+  margin-left: 10rem;
 }
 
 #random-search {
   grid-area: random-search;
+  /* margin-left: 20px; */
+}
+
+.search-box {
+  grid-area: search;
+  width: 60rem;
+  height: 60px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.search-box > i {
+  font-size: 20px;
+  padding-left: 10px;
+  /* color: #fff; */
+}
+
+.search-box > input {
+  flex: 0;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+  /* position: relative; */
+}
+
+.button {
+  font-size: 1.5rem;
+  width: 15rem;
+  /* align-content: center; */
+  /* justify-content: center; */
+}
+
+.mic {
+  padding-left: 30px;
+  /* position: relative; */
+  align-content: flex-end;
+}
+
+.color-text {
+  color: rgb(62, 181, 151);
 }
