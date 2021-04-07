@@ -13,12 +13,13 @@ html {
 
 body {
   font-family: poppins;
-  background-color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(42, 44, 53);
 }
 
 #navbar {
   display: grid;
   padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 25px;
   padding-right: 25px;
   grid-template-columns: 80px 80px 1fr 80px 80px 80px 50px;
@@ -33,6 +34,7 @@ a {
 
 #flooble {
   font-size: 8rem;
+  color: #fff;
   display: inline-flex;
   text-align: center;
   justify-content: center;
@@ -79,7 +81,7 @@ a {
   justify-content: center;
   text-align: center;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 20rem 80px 600px;
+  grid-template-rows: 20rem 80px 25rem;
   grid-template-areas:
     ". flooble ."
     ". search ."
@@ -164,4 +166,36 @@ a {
 
 .color-text {
   color: rgb(62, 181, 151);
+}
+
+#footer {
+  display: flex;
+  background-color: rgb(94, 99, 123);
+  display: grid;
+  grid-template-columns: 150px 50px 0.95fr 100px 100px 70px;
+  grid-template-areas: "advertising business . privacy terms settings";
+}
+
+#footer a {
+  margin: 2rem;
+}
+
+#advertising {
+  grid-area: advertising;
+}
+
+#business {
+  grid-area: business;
+}
+
+#privacy {
+  grid-area: privacy;
+}
+
+#terms {
+  grid-area: terms;
+}
+
+#settings {
+  grid-area: settings;
 }
