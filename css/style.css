@@ -128,12 +128,11 @@ a {
   align-items: center;
   padding: 20px;
   background-color: #fff;
+  /* display: inline; */
 }
 
 .search-box > i {
   font-size: 20px;
-  padding-left: 10px;
-  /* color: #fff; */
 }
 
 .search-box > input {
@@ -153,10 +152,14 @@ a {
   /* justify-content: center; */
 }
 
-.mic {
-  padding-left: 30px;
+.search-icon {
+  /* margin-right:; */
+}
+
+.mic-icon {
+  padding-left: 41rem;
   /* position: relative; */
-  align-content: flex-end;
+  /* align-content: flex-end; */
 }
 
 .color-text {
