@@ -135,6 +135,7 @@ a {
 
 .search-box > i {
   font-size: 20px;
+  cursor: pointer;
 }
 
 .search-box > input {
@@ -152,6 +153,16 @@ a {
   width: 15rem;
   /* align-content: center; */
   /* justify-content: center; */
+}
+
+.button:hover {
+  background-color: #dfdfdf;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #c5c5c5;
+  transition-duration: 0.15s;
 }
 
 .search-icon {
@@ -198,4 +209,9 @@ a {
 
 #settings {
   grid-area: settings;
+}
+
+a:hover {
+  color: #cccccc;
+  transition-duration: 0.25s;
 }
