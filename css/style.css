@@ -101,6 +101,7 @@ a {
   /* padding-top: 5rem; */
   grid-area: flooble;
   letter-spacing: 2rem;
+  /* justify-content: center; */
 }
 
 /* Transfered grid area to .search-box. i created a box container or the search bar. CONTINUE*/
@@ -123,8 +124,8 @@ a {
 
 .search-box {
   grid-area: search;
-  width: 60rem;
-  height: 60px;
+  max-width: 60rem;
+  max-height: 60px;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -151,6 +152,7 @@ a {
 .button {
   font-size: 1.5rem;
   width: 15rem;
+  border-radius: 10px;
   /* align-content: center; */
   /* justify-content: center; */
 }
@@ -215,3 +217,44 @@ a:hover {
   color: #cccccc;
   transition-duration: 0.25s;
 }
+
+/*
+
+$desktop: 1200px;   // xl
+$laptop: 1024px;   // lg
+$tablet: 768px;    // md
+$phone: 480px;    // sm
+
+*/
+
+@media (min-width: 481px) and (max-width: 768px) {
+  #flooble {
+    font-size: 4.5rem;
+    margin-top: 5rem;
+  }
+
+  #main {
+  }
+  .search-box {
+    min-width: 40rem;
+    /* max-width: 60rem; */
+    /* margin-left: 2.5rem; */
+  }
+
+  .mic-icon {
+    padding-left: 21rem;
+  }
+
+  .button {
+    font-size: 1rem;
+    width: 10rem;
+  }
+
+  #flooble-search-btn {
+    margin-left: 5rem;
+  }
+
+  #random-search {
+    margin-right: 5rem;
+  }
+} ;
