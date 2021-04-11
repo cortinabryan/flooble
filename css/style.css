@@ -9,6 +9,7 @@
 html {
   height: 100%;
   min-height: 100%;
+  /* background-color: rgb(42, 44, 53); */
 }
 
 body {
@@ -81,20 +82,11 @@ a {
   justify-content: center;
   text-align: center;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 20rem 80px 25rem;
+  grid-template-rows: 20rem 5rem 10rem;
   grid-template-areas:
     ". flooble ."
     ". search ."
-    ". flex-box .";
-}
-
-#flex-box {
-  padding: 50px;
-  grid-area: flex-box;
-  display: grid;
-  grid-template-columns: 0fr 1fr 1fr 0fr;
-  grid-template-rows: 0 4.5rem 0 0;
-  grid-template-areas: ". . . ." ". flooble-search-btn random-search .";
+    ". buttons .";
 }
 
 #flooble {
@@ -106,52 +98,90 @@ a {
 
 /* Transfered grid area to .search-box. i created a box container or the search bar. CONTINUE*/
 
-#search {
-  /* grid-area: search; */
-  border-radius: 80px;
+#buttons {
+  grid-area: buttons;
+  /* background-color: rgb(160, 29, 29); */
+  padding: 40px;
+  /* margin:  */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  /* grid-template-rows: 0 4.5rem 0 0; */
+  /* grid-template-areas: ". . . ." ". flooble-search-btn random-search ."; */
+  /* margin-bottom: 50rem; */
 }
 
 #flooble-search-btn {
   font-weight: 5rem;
-  grid-area: flooble-search-btn;
-  margin-left: 10rem;
+  justify-self: flex-end;
+  margin-right: 1rem;
+  /* justify-self: start; */
+  /* grid-area: flooble-search-btn; */
+  /* margin-left: 10rem; */
 }
 
 #random-search {
-  grid-area: random-search;
+  justify-self: flex-start;
+  margin-left: 1rem;
+  /* grid-area: random-search; */
   /* margin-left: 20px; */
 }
 
 .search-box {
   grid-area: search;
-  max-width: 60rem;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* max-width: 60rem; */
   max-height: 60px;
+  /* max-width: 40rem; */
   border-radius: 30px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  padding: 20px;
+  padding: 0 20px;
+  /* padding:  */
   background-color: #fff;
-  /* display: inline; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.search-box > i {
+.search-box-left {
+  justify-self: flex-start;
+}
+
+.search-box-left > i {
   font-size: 20px;
   cursor: pointer;
 }
 
-.search-box > input {
-  flex: 0;
+.search-box-left > input {
+  /* background-color: rgb(99, 31, 31); */
   height: 40px;
   border: none;
   outline: none;
   font-size: 18px;
-  padding-left: 10px;
+  position: relative;
+  /* margin-right: 35rem; */
+  /* padding-left: 50px; */
   /* position: relative; */
+}
+
+.search-icon {
+  margin: 0 10px;
+  justify-self: flex-start;
+}
+
+.mic-icon {
+  justify-self: flex-end;
+  /* justify-content: flex-end; */
+  /* padding-left: 41rem; */
+  /* position: relative; */
+  /* align-content: flex-end; */
 }
 
 .button {
   font-size: 1.5rem;
   width: 15rem;
+  /* width: 15rem; */
   border-radius: 10px;
   /* align-content: center; */
   /* justify-content: center; */
@@ -167,22 +197,15 @@ a {
   transition-duration: 0.15s;
 }
 
-.search-icon {
-  /* margin-right:; */
-}
-
-.mic-icon {
-  padding-left: 41rem;
-  /* position: relative; */
-  /* align-content: flex-end; */
-}
-
 .color-text {
   color: rgb(62, 181, 151);
 }
 
 #footer {
-  display: flex;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: rgb(94, 99, 123);
   display: grid;
   grid-template-columns: 150px 50px 0.95fr 100px 100px 70px;
@@ -236,13 +259,14 @@ $phone: 480px;    // sm
   #main {
   }
   .search-box {
-    min-width: 40rem;
-    /* max-width: 60rem; */
+    /* min-width: 40rem; */
+    max-width: 40rem;
     /* margin-left: 2.5rem; */
   }
 
   .mic-icon {
-    padding-left: 21rem;
+    /* padding-right: 21rem; */
+    /* margin-right: 110rem; */
   }
 
   .button {
@@ -256,5 +280,39 @@ $phone: 480px;    // sm
 
   #random-search {
     margin-right: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #main {
+    grid-template-rows: 10rem 5rem;
+  }
+
+  #flooble {
+    justify-self: center;
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    /* padding-bottom: ; */
+  }
+  .search-box {
+    max-width: 29rem;
+    /* margin-left: 8rem; */
+    /* margin-bottom: 2rem; */
+  }
+  .mic-icon {
+    /* padding-left: 8rem; */
+    display: none;
+  }
+  #buttons {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .button {
+    font-size: 0.5rem;
+    width: 8rem;
+  }
+
+  #navbar {
   }
 } ;
