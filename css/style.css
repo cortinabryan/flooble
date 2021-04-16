@@ -25,6 +25,7 @@ body {
   grid-template-columns: 80px 80px 1fr 80px 80px 80px 50px;
   grid-template-rows: 50px;
   grid-template-areas: "about store . mail images menu sign-in";
+  /* grid-template-rows: ". hamburger"; */
 }
 
 a {
@@ -74,6 +75,24 @@ a {
 
 #sign-in img {
   border-radius: 50%;
+}
+
+.hamburger-container {
+  display: none;
+}
+
+.hamburger-icon {
+  /* grid-area: hamburger; */
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  /* display: none; */
+  /* display: absolute; */
+}
+
+.hamburger-icon:focus {
+  /* outline: none; */
 }
 
 #main {
@@ -216,11 +235,19 @@ $phone: 480px;    // sm
 
 */
 
+/* Tablet */
+
+/* @media (min-width: 481px) and (max-width: 768px) */
+
 @media (min-width: 481px) and (max-width: 768px) {
   #flooble {
     font-size: 4.5rem;
     margin-top: 5rem;
   }
+
+  /* #navbar button {
+    display: none;
+  } */
 
   #main {
   }
@@ -246,9 +273,45 @@ $phone: 480px;    // sm
   }
 }
 
+/* Mobile */
+
 @media (max-width: 480px) {
   #main {
     grid-template-rows: 10rem 5rem;
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  .hamburger-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(82, 16, 16);
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+  }
+  .hamburger-icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px;
+  }
+
+  .hamburger-links {
+    display: flex;
+    background-color: rgb(34, 95, 124);
+    flex-direction: column;
+    padding: 50px 0 0 20px;
+  }
+
+  .hamburger-links a {
+    /* display: block; */
+  }
+
+  .hamburger-links.show {
+    display: none;
   }
 
   #flooble {
